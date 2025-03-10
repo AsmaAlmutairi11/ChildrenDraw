@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-struct ChildrenDrawApp: App {
+struct YourAppName: App {
+    @StateObject var MainData = Model()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AnimationView()
+                .environmentObject(MainData)
         }
     }
 }
